@@ -59,7 +59,7 @@ Once you've set up your credentials, you can run the script:
 
 ```
 
-python reddit_scraper.py
+python scrape.py
 
 ```
 
