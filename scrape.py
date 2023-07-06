@@ -19,15 +19,15 @@ reddit = praw.Reddit(client_id=client_id,
                      username=username,
                      password=password)
 
-subreddit_list = ['wearables', 'AppleWatch', 'GarminWatches']
-df = pd.DataFrame()
+subreddit_list = ['GarminWatches']
+data = []
 
 for subreddit_name in subreddit_list:
     subreddit = reddit.subreddit(subreddit_name)
-    for post in subreddit.new(limit=10000):
+    for post in subreddit.new(limit=100):
         post.comments.replace_more(limit=None)
         for comment in post.comments.list():
-            df = df.append({
+            data.append({
                 'subreddit': subreddit_name,
                 'title': post.title,
                 'id': post.id,
@@ -44,7 +44,7 @@ for subreddit_name in subreddit_list:
                 'comment_text': comment.body,
                 'post_date': datetime.datetime.fromtimestamp(post.created_utc),
                 'comment_date': datetime.datetime.fromtimestamp(comment.created_utc)
-            }, ignore_index=True)
+            })
 
-
+df = pd.DataFrame(data)
 df.to_csv('reddit_data.csv', index=False)
