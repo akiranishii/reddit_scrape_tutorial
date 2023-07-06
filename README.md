@@ -26,19 +26,28 @@ To set up your environment to run this script, follow these steps:
     cd <directory-name>
     ```
 
-3. Set up a virtual environment (optional but recommended).
+3. Set up a virtual environment using `pipenv` (optional but recommended). If you don't have `pipenv` installed, you can install it using pip:
 
     ```
-    python -m venv env
-    source env/bin/activate  # For Unix or MacOS
-    .\env\Scripts\activate   # For Windows
+    pip install pipenv
     ```
 
-4. Install the required Python packages.
+    Then, navigate to your project directory and create a new virtual environment:
 
     ```
-    pip install -r requirements.txt
+    pipenv shell
     ```
+
+    This command creates a new virtual environment for your project and activates it.
+
+4. Install the required Python packages using `pipenv`.
+
+    ```
+    pipenv install -r requirements.txt
+    ```
+
+    This will install all the dependencies listed in the `requirements.txt` file in the created virtual environment.
+
 
 ## Usage
 
