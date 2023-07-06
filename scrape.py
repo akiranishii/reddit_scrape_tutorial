@@ -19,7 +19,7 @@ reddit = praw.Reddit(client_id=client_id,
                      username=username,
                      password=password)
 
-subreddit_list = ['GarminWatches']
+subreddit_list = ['wearables','AppleWatch','GarminWatches']
 data = []
 
 for subreddit_name in subreddit_list:
