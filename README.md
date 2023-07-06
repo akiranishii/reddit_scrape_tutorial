@@ -17,7 +17,7 @@ To set up your environment to run this script, follow these steps:
 1. Clone this repository to your local machine.
 
     ```
-    git clone <repository-url>
+    git clone git@github.com:akiranishii/reddit_scrape_tutorial.git
     ```
 
 2. Navigate to the cloned directory.
