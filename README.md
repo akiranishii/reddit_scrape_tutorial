@@ -139,3 +139,18 @@ Replace <your-client-id>, <your-secret-key>, <your-username>, and <your-password
 
 Once you've set up your .env file, you can run the script as described in the Usage section.
 
+## Configuration
+
+The script is currently configured to fetch the 100 most recent posts from each specified subreddit. If you wish to fetch more or less posts, you can change the `limit` parameter in the following line of code:
+
+```python
+for post in subreddit.new(limit=100):
+```
+
+Just replace 100 with the number of posts you wish to fetch. For example, if you want to fetch the 500 most recent posts, the line would look like this:
+
+```python
+for post in subreddit.new(limit=500):
+```
+
+Note: Keep in mind that fetching more posts will take more time and may be rate-limited by Reddit.
