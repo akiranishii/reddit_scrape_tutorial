@@ -108,9 +108,7 @@ Here's how to do that:
     - **App type**: Select "script".
     - **description**: Enter a description for your app (optional).
     - **about url**: Enter a URL where users can learn more about your app (optional).
-    - **post install url**: Leave this blank.
     - **redirect uri**: Enter "http://localhost:8000" (without quotes).
-    - **permissions**: Leave as "read".
 
 5. Click the "Create app" button.
 
